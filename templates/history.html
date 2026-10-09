@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Prediction History</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Image</th>
+        <th>Disease</th>
+        <th>Probability</th>
+        <th>Time</th>
+    </tr>
+
+    {% for row in data %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td><img src="/static/uploads/{{ row[1] }}" width="80"></td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

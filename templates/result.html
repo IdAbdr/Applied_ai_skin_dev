@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Prediction Result</h2>
+
+<img src="/static/uploads/{{ filename }}" width="300">
+
+<p><strong>Disease:</strong> {{ disease }}</p>
+<p><strong>Probability:</strong> {{ probability }}</p>
+
+<a href="/">Try Another</a>
+
+{% endblock %}
